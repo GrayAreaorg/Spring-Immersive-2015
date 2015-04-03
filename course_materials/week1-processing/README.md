@@ -59,6 +59,12 @@ Functionality
 
 ## June 26th (6pm - 9pm)
 
+Functions
+* Making a function - lp 7.3
+* Functions that return values - lp 7.4
+* Keypressed
+* Keypressed_Fucntions
+
 Objects
 * Class & Object - lp 8.1 _ http://processing.org/learning/objects/
 * Two Objects - lp 8.2
@@ -74,32 +80,8 @@ Arrays
 [Collision Detection](http://processing.org/learning/topics/circlecollision.html
 ) lp 10-3
 
-Anatomy of a simple game
-* catching drops - lp  10.7 - 10.10
-
-Translating a Matrix
-  * Rotate - lp 14.5
-  * 3d Rotate - lp 14.10
-  * Translate - lp 14.12
-  * push pop matrix - lp 14.14
-  * solar system - lp 14.16
-  * geometric art - lp 14.17
-  * planets - lp 14.18
-
-Images -
-  * creating noise - lp 15.5
-  * adjust brightness - lp 15.8
-  * filters - 15.11
-  * pointillism - 15.14
-  * expanding - 15.15
-
 ### Resources
 * [Controlp5 Library](http://www.sojamo.de/libraries/controlP5/) -  GUI and controller library
-
-## June 28th (12pm - 6pm)
-
-Exercise ---
-Create and embed an interactive sketch on your github pages website. Use either image based processing  (pointillism - 15.14) or geometry based animation (geometric art - lp 14.17).
 
 Processing.JS
 * [Processing.JS Basic Examples](http://processingjs.org/learning/basic/)
