@@ -116,6 +116,10 @@ Works:
 * [Diana Lange](http://www.openprocessing.org/user/5969/)
 * [Diana Lange (Teachings)](http://www.openprocessing.org/user/38945/)
 * [Greg Wittmann](http://www.openprocessing.org/user/37686/)
+* [CodePen : Processing](http://codepen.io/search?q=processing&limit=all&depth=everything&show_forks=false)
+* [Codepen example 1](http://codepen.io/Bosworth99/pen/cfFtb)
+* [Codepen example 2](http://codepen.io/Ticolyle/pen/oueIa)
+* [Codepen example 3](http://codepen.io/findes/pen/wBexWd)
 
 Processing.JS:
 * [Processing.JS Basic Examples](http://processingjs.org/learning/basic/)
@@ -123,7 +127,7 @@ Processing.JS:
 Tools:
 * [Processing Cheat Sheet](http://graphics.cs.williams.edu/courses/cs107/s11/lecture/14-rps/ProcessingCheatSheet.pdf)
 * [Websaver](https://code.google.com/p/websaver/)
-
+ 
 Advanced Processing Examples:
 * [HTML5 & Processing](http://aaron-sherwood.com/processingjs/)
 * [Changing CSS with processing](http://www.openprocessing.org/sketch/153084/create)
