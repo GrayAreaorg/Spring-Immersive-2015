@@ -78,7 +78,7 @@ Arrays
 * Adding interaction  to a class- lp 9.10
 
 
-## April 4th (6pm - 9pm)
+## April 4th (12pm - 4pm)
 
 Collision Detection - http://processing.org/learning/topics/circlecollision.htm - lp 10-3
 
