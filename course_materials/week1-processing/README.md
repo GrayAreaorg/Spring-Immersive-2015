@@ -10,7 +10,7 @@ This class will give an overview of programing fundamentals (variables, conditio
 * [Processing](http://processing.org)
 
 
-## April 2nd (6pm - 9pm)
+## March 31st (6pm - 9pm)
 
 ### Resources
 * [Processing.org](http://processing.org)
@@ -57,7 +57,7 @@ Functionality
 * Making a function - lp 7.3
 * Functions that return values - lp 7.4
 
-## April 4th (6pm - 9pm)
+## April 2nd (6pm - 9pm)
 
 Functions
 * Making a function - lp 7.3
@@ -77,36 +77,29 @@ Arrays
 * Resizing an Array - lp 9.11
 * Adding interaction  to a class- lp 9.10
 
-### Installation Art
 
-#### Videos to Watch
-* [The Art of Creative Coding](https://www.youtube.com/watch?v=eBV14-3LT-g)
-* [Hello World! Processing](https://vimeo.com/60735314)
-* [Installation Art: Who Cares?](https://vimeo.com/25101140)
-* [MediaArtTube (Youtube Channel)](https://www.youtube.com/user/MediaArtTube)
-* [Processing (Vimeo search)](https://vimeo.com/tag:processing)
-* [Creators Project](http://thecreatorsproject.vice.com/en_us)
-* [Eyeo Festival // INST-INT (Vimeo Channel)](https://vimeo.com/eyeofestival)
+## April 4th (6pm - 9pm)
 
-#### Discussing Creative Works/Artists
-* [Niklas Roy - My little piece of Privacy](http://www.niklasroy.com/project/88/my-little-piece-of-privacy)
-* [jonobr1 and Lullatone - Patatap](http://www.patatap.com/)
-* [Chris O'Shea](http://www.chrisoshea.org/)
-* [The Fun Theory](http://www.thefuntheory.com/)
-* [Zimoun](http://www.zimoun.net/)
-* [Kit Webster](http://kitwebster.com/category/selected/)
-* [Ryoji Ikeda - Transmediate](https://vimeo.com/63652019)
-* [Aaron Koblin's - The Sheep Market](http://www.aaronkoblin.com/work/thesheepmarket/index.html)
-* [Daniel Rozin's Mirrors](http://www.smoothware.com/danny/)
-* [Jonahtan Harris](http://www.number27.org/iwytwm)
-* [Camille Utterback](http://camilleutterback.com/)
-* [Julian Oliver](http://julianoliver.com/output/transparency-grenade)
+Collision Detection - http://processing.org/learning/topics/circlecollision.htm - lp 10-3
 
-#### Online Resources
-* [Creative Applications](http://www.creativeapplications.net/)
-* [We Make Money Not Art](http://we-make-money-not-art.com/)
-* [Rhizome](http://rhizome.org/)
-* [Today and Tomorrow](http://www.todayandtomorrow.net/)
+Anatomy of a simple game
+* Catching Drops - lp  10.7 - 10.10
+
+Translating a Matrix
+* Rotate - lp 14.5
+* 3d Rotate - lp 14.10
+* Translate - lp 14.12
+* Push Pop Matrix - lp 14.14
+* Solar System - lp 14.16
+* Geometric Art - lp 14.17
+* Planets - lp 14.18
+
+Images -
+* Creating Noise - lp 15.5
+* Adjust Brightness - lp 15.8
+* Filters - 15.11
+* Pointillism - 15.14
+* Expanding - 15.15
 
 ### Processing Resources
 
@@ -150,6 +143,35 @@ Online Learning:
 * [Leranable Programing](http://worrydream.com/LearnableProgramming/)
 
 Video:
-* [Syphon](http://syphon.v002.info/)
 * [OpenCV tutorail](http://createdigitalmotion.com/2009/02/processing-tutorials-getting-started-with-video-processing-via-opencv/)
 
+### Installation Art
+
+#### Videos to Watch
+* [The Art of Creative Coding](https://www.youtube.com/watch?v=eBV14-3LT-g)
+* [Hello World! Processing](https://vimeo.com/60735314)
+* [Installation Art: Who Cares?](https://vimeo.com/25101140)
+* [MediaArtTube (Youtube Channel)](https://www.youtube.com/user/MediaArtTube)
+* [Processing (Vimeo search)](https://vimeo.com/tag:processing)
+* [Creators Project](http://thecreatorsproject.vice.com/en_us)
+* [Eyeo Festival // INST-INT (Vimeo Channel)](https://vimeo.com/eyeofestival)
+
+#### Discussing Creative Works/Artists
+* [Niklas Roy - My little piece of Privacy](http://www.niklasroy.com/project/88/my-little-piece-of-privacy)
+* [jonobr1 and Lullatone - Patatap](http://www.patatap.com/)
+* [Chris O'Shea](http://www.chrisoshea.org/)
+* [The Fun Theory](http://www.thefuntheory.com/)
+* [Zimoun](http://www.zimoun.net/)
+* [Kit Webster](http://kitwebster.com/category/selected/)
+* [Ryoji Ikeda - Transmediate](https://vimeo.com/63652019)
+* [Aaron Koblin's - The Sheep Market](http://www.aaronkoblin.com/work/thesheepmarket/index.html)
+* [Daniel Rozin's Mirrors](http://www.smoothware.com/danny/)
+* [Jonahtan Harris](http://www.number27.org/iwytwm)
+* [Camille Utterback](http://camilleutterback.com/)
+* [Julian Oliver](http://julianoliver.com/output/transparency-grenade)
+
+#### Online Resources
+* [Creative Applications](http://www.creativeapplications.net/)
+* [We Make Money Not Art](http://we-make-money-not-art.com/)
+* [Rhizome](http://rhizome.org/)
+* [Today and Tomorrow](http://www.todayandtomorrow.net/)
