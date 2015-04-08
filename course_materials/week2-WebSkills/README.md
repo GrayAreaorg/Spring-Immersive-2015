@@ -1,41 +1,30 @@
 <div>
-___ ___ ___ ___ _ ___ __ __ ___ ___ _ __ _____ _ _ ___
-| _ \ _ \/ _ \| _ ) | | __| \/ | / __|/ _ \| |\ \ / /_ _| \| |/ __|
-| _/ / (_) | _ \ |__| _|| |\/| | \__ \ (_) | |_\ V / | || .` | (_ |
-|_| |_|_\\___/|___/____|___|_| |_| |___/\___/|____\_/ |___|_|\_|\___|
-___ ___ ___ ___ ___ ___ ___
-| _ \ _ \/ _ \ / __| __/ __/ __|
-| _/ / (_) | (__| _|\__ \__ \
-|_| |_|_\\___/ \___|___|___/___/
-
-
-YES ============================= NO
-+-----------|| Does the Darn Thing work? ||-----------+
-| ============================= |
-V V
-+----------+ +---------+ +---------+
-| Don't | NO | Does | +-------+ YES | Did you |
-| mess | +---| anyone |<------| YOU |<---------| mess |
-| with it! | | | know? | | MORON | | with it |
-+----------+ | +---------+ +-------+ +---------+
-| V | YES | NO
-| +------+ +-----------+ |
-| | HIDE | V V
-| | IT | +--------+ +-----------+
-| +------+ | YOU | YES | WILL THEY |
-| | +------->| POOR |<------------| CATCH YOU?|
-| | | |BASTARD!| +-----------+
-| | | |________| | NO
-| | | | |
-| | | V V
-| | | +---------------+ +-----------+
-| | | NO | CAN YOU BLAME | |DESTROY THE|
-| | +------| SOMEONE ELSE? | | EVIDENCE |
-| | +---------------+ +-----------+
-| | | YES |
-| | v |
-| | ============================ |
-| +---->|| N O ||<---------+
-+------------>|| P R O B L E M ||
-============================
+<style>
+            #fishtank {
+                width: 350px;
+                background-color: aqua;
+            }
+            #fish1 { color: red }
+            #fish2 { color: orange }
+            #fish3 { color: blue }
+            #fish4 { color: purple }
+            #fish5 { color: green }
+            #fish6 { color: gold }
+            #fish7 { color: brown }
+            #crab  { color: red }
+        </style>
+    </head>
+    <body>
+        <div id="fishtank">
+            <marquee id="fish1" scrollamount=7>&lt;&gt;&lt;</marquee>
+            <marquee id="fish2" scrollamount=3>&lt;&gt;&lt;</marquee>
+            <marquee id="fish3" direction="right" scrollamount=6>&gt;&lt;&gt;</marquee>
+            <marquee id="fish4" scrollamount=10>&lt;&gt;&lt;</marquee>
+            <marquee id="fish5" direction="right" scrollamount=5>&gt;&lt;&gt;</marquee>
+            <marquee id="fish6" scrollamount=6>&lt;&gt;&lt;</marquee>
+            <marquee id="fish7" direction="right" scrollamount=8>&gt;&lt;&gt;</marquee>
+            <br><br>
+            <marquee id="crab" behavior="alternate" scrollamount="4"> (\/)O_o(\/) </marquee>
+        </div>
+    </body>
 </div>
