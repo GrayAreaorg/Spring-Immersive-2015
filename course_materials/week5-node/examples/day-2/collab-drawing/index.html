@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Socket.IO chat</title>
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      body { font: 13px Helvetica, Arial; }
+      form { background: #000; padding: 3px; position: fixed; bottom: 0; width: 100%; }
+      form input { border: 0; padding: 10px; width: 90%; margin-right: .5%; }
+      form button { width: 9%; background: rgb(130, 224, 255); border: none; padding: 10px; }
+      #messages { list-style-type: none; margin: 0; padding: 0; }
+      #messages li { padding: 5px 10px; }
+      #messages li:nth-child(odd) { background: #eee; }
+    </style>
+    <script language="javascript" type="text/javascript" src="p5/p5.js"></script>
+    <!-- uncomment lines below to include extra p5 libraries -->
+    <script language="javascript" src="p5/addons/p5.dom.js"></script>
+    <script language="javascript" src="p5/addons/p5.sound.js"></script>
+    <!-- this line removes any default padding and style. you might only need one of these values set. -->
+    <style> body {padding: 0; margin: 0;} </style>
+  </head>
+  <body>
+    <script src="/socket.io/socket.io.js"></script>
+      <script>
+        var socket;
+        // p5
+        function setup() {
+          createCanvas(windowWidth, windowHeight);
+          background(0);
+          // initialize client side socektio  
+          socket = io();
+
+          // We make a named event called 'mouse' and write an
+          // anonymous callback function
+          socket.on('mouse',
+            // When we receive data
+            function(data) {
+              console.log("Got: " + data.x + " " + data.y);
+              // Draw a blue circle
+              fill(0,0,255);
+              noStroke();
+              ellipse(data.x,data.y,80,80);
+            }
+          );
+        }
+
+        function draw() {
+          // empty
+        }
+
+        function mouseDragged() {
+          console.log("mouse dragged at: " + mouseX + " " + mouseY);
+          // Draw with our own brush
+          fill(255);
+          noStroke();
+          ellipse(mouseX,mouseY,80,80);
+
+          // Make a little object with mouseX and mouseY
+          var data = {
+            x: mouseX,
+            y: mouseY
+          };
+          // Send that object to the socket
+          socket.emit('mouse',data);
+        }
+      </script>
+  </body>
+</html>

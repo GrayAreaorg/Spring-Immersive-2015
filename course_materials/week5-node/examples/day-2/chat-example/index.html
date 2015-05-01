@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Socket.IO chat</title>
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      body { font: 13px Helvetica, Arial; }
+      form { background: #000; padding: 3px; position: fixed; bottom: 0; width: 100%; }
+      form input { border: 0; padding: 10px; width: 90%; margin-right: .5%; }
+      form button { width: 9%; background: rgb(130, 224, 255); border: none; padding: 10px; }
+      #messages { list-style-type: none; margin: 0; padding: 0; }
+      #messages li { padding: 5px 10px; }
+      #messages li:nth-child(odd) { background: #eee; }
+    </style>
+  </head>
+  <body>
+    <ul id="messages"></ul>
+    <form action="">
+      <input id="m" autocomplete="off" /><button>Send</button>
+    </form>
+      <script src="/socket.io/socket.io.js"></script>
+      <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+      <script>
+        // initialize client side socektio  
+        var socket = io();
+          
+        // use jQuery to capture form submit and instead send with soecktio  
+        $('form').submit(function(){
+          // get text from input field
+          var message = $('#m').val();    
+            
+          // emit 'chat message' event    
+          socket.emit('chat message', message);
+            
+          // clear form input since we sent the message already    
+          $('#m').val('');
+            
+          // prevent event propagation so form submit event does
+          // not send a web request and initialize a page reload
+          return false;
+        });
+          
+        // receive messages sent from the browser
+        socket.on('chat message', function(msg){
+            // append a <li> to the message window with content
+            $('#messages').append($('<li>').text(msg));
+        });
+      </script>
+  </body>
+</html>
