@@ -67,6 +67,7 @@ Create a TCP chat server and client.
 * **Example**: [socketio-send](examples/day-2/04-socketio-send/app.js)
 * socket.io: broadcasting data
 * **Example**: [socketio-recieve](examples/day-2/04-socketio-recieve/app.js)
+* [p5.js + node + socket.io](https://github.com/processing/p5.js/wiki/p5.js,-node.js,-socket.io)
 
 ### Assignment #3: Giphy Chat
 
