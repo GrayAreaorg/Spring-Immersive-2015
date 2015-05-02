@@ -1,0 +1,10 @@
+{
+  "name": "gray-area-node-examples-day-3",
+  "private": true,
+  "dependencies": {
+    "async": "^0.9.0",
+    "chokidar": "~1.0.0-rc3",
+    "cumulative-moving-average": "^1.0.0",
+    "twitter": "~1.2.1"
+  }
+}
