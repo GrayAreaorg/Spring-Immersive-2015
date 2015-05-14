@@ -2,15 +2,18 @@
 <meta charset="utf-8">
 <body>
 <style>
+/* position the columns next to one another for quicker review */
 .column { width: 50%; float: left; }
 </style>
 
+<!-- a place to display the input data -->
 <div class="column">
   <h1>In</h1>
   <pre id="in">
   </pre>
 </div>
 
+<!-- a place to display the output data -->
 <div class="column">
   <h1>Out</h1>
   <pre id="out">
@@ -21,26 +24,64 @@
 <script>
 
 
-d3.csv( "data.csv", map, function( error, dataIn ) {
-    display( dataIn, "in" );
-    var dataOut = reduce( dataIn );
-    display( dataOut, "out" );
-} );
+// read in the test data, using D3
+d3.csv( "data.csv",
+    // pass D3 a map function to transform each individual row
+    map,
+    // pass D3 a function to handle the mapped data
+    function( error, dataIn ) {
+      // display the input data (it has already been mapped)
+      display( dataIn, "in" /* references `id="in"` in the HTML */ );
+      // transform the entirety of the data using a reduce function
+      var dataOut = reduce( dataIn );
+      // display the output data to make sure it looks right
+      display( dataOut, "out" /* references `id="out"` in the HTML */ );
+   }
+);
 
+// Our map function. Operates on every single datum/row.
 function map( datum ) {
+  // Break the date field into an array, splitting on the slashes, then
+  // select the first part with `[0]`. Finally, store it as a new property
+  // on the datum.
   datum.monthStr = datum.date.split( "/" )[0];
+  // Convert the month property from a string to a number, so that we can use
+  // it later as an array index. Store it on the datum as a new property.
   datum.monthNum = parseInt( datum.monthStr );
+  // Pass the modified datum back to the calling function.
   return datum;
 }
 
+// Our reduce function. Takes a dataset and returns a new dataset of a
+// different size, performing calculations across the dataset as a whole.
 function reduce( dataIn ) {
-  return dataIn.reduce( function( dataOut, datum, index ) {
-    dataOut[ datum.monthNum ] = dataOut[ datum.monthNum ] || { count: 0, month: datum.monthStr };
-    dataOut[ datum.monthNum ].count++;
-    return dataOut;
-  }, [] ).filter( function( datum ) { return !!datum; } );
+  // map/reduce is so fundamental, that JavaScript even has methods called
+  // map and reduce. Here we call reduce on the input data, and pass reduce
+  // a function that will get called on every single datum. Our function is
+  // also passed the dataOut variable, which is the output data, and the index
+  // variable which is our position in the input data (like a row number).
+  return dataIn.reduce(
+    function( dataOut, datum, index ) {
+      // if there is a datum in the output for the current month, leave it be,
+      // otherwise initialize it with count 0 and the string for the month.
+      dataOut[ datum.monthNum ] = dataOut[ datum.monthNum ] || { count: 0, month: datum.monthStr };
+      // increment the count for the current month.
+      dataOut[ datum.monthNum ].count++;
+      // Return the new output data. This value will be passed back to this
+      // function with the next datum in the dataset.
+      return dataOut;
+    },
+    // sets the initial value of the dataOut variable.
+    []
+  )
+  // before we return the new output data, filter it to remove any empty
+  // data/rows. There may be empties if our months start at 1 (0 will be
+  // empty), or if we're missing a month.
+  .filter( function( datum ) { return !!datum; } );
 }
 
+// This displays the data by just printing it as JSON. This function takes
+// the DOM id of an element to use for displaying the JSON.
 function display( data, domId ) {
   document.getElementById( domId ).innerHTML = JSON.stringify( data, null, 4 );
 }
