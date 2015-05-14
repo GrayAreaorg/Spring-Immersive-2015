@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<body>
+<style>
+.column { width: 50%; float: left; }
+</style>
+
+<div class="column">
+  <h1>In</h1>
+  <pre id="in">
+  </pre>
+</div>
+
+<div class="column">
+  <h1>Out</h1>
+  <pre id="out">
+  </pre>
+</div>
+
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script>
+
+
+d3.csv( "data.csv", map, function( error, dataIn ) {
+    display( dataIn, "in" );
+    var dataOut = reduce( dataIn );
+    display( dataOut, "out" );
+} );
+
+function map( datum ) {
+  datum.monthStr = datum.date.split( "/" )[0];
+  datum.monthNum = parseInt( datum.monthStr );
+  return datum;
+}
+
+function reduce( dataIn ) {
+  return dataIn.reduce( function( dataOut, datum, index ) {
+    dataOut[ datum.monthNum ] = dataOut[ datum.monthNum ] || { count: 0, month: datum.monthStr };
+    dataOut[ datum.monthNum ].count++;
+    return dataOut;
+  }, [] ).filter( function( datum ) { return !!datum; } );
+}
+
+function display( data, domId ) {
+  document.getElementById( domId ).innerHTML = JSON.stringify( data, null, 4 );
+}
+
+
+</script>
