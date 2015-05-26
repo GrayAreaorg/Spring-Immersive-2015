@@ -49,12 +49,12 @@ void keyPressed() {
 
   case 'l':
     // loads the saved layout
-    ks.load();
+    ks.load("mapping.xml");
     break;
 
   case 's':
     // saves the layout
-    ks.save();
+    ks.save("mapping.xml");
     break;
   }
 }
