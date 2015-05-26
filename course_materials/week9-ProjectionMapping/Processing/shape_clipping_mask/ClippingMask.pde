@@ -14,6 +14,7 @@ class ClippingMask{
   
   ClippingMask( PApplet sketch, String mov){
     //img = pimg;
+    
     movie = new Movie(sketch, mov);    
     movie.loop();
     
