@@ -142,6 +142,7 @@ class ClippingMask{
     }
     
     saveJSONArray(json, "data/"+dataFilename);
+    println("successfully saved the data");
   }
   
   void loadData(){
@@ -158,5 +159,7 @@ class ClippingMask{
         addPointToShape(i, x, y, z);
       }
     }
+    
+    println("successfully loaded the data");
   }
 }
