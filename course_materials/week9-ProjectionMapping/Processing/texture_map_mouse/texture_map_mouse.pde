@@ -1,10 +1,13 @@
 import deadpixel.keystone.*;
+import processing.video.*;
 
 Keystone ks; //this the main library object - must have
 CornerPinSurface surface; //this is the surface you can
                           //  manipulate to fit a shape
 PGraphics texture; //this is where you draw your 
                    //  image/video/animation/etc onto
+                   
+Movie movie; //load your video file here                  
 
 void setup(){
   size(800, 600, P3D); //Keystone requires a 3d renderer, so specify one here
@@ -13,9 +16,17 @@ void setup(){
   surface = ks.createCornerPinSurface(400,300,20); //create a new "surface" object
                                                    //  that the library will manage
   
-  texture = createGraphics(400, 300); //create the texture surface that will
+  texture = createGraphics(400, 300, P2D); //create the texture surface that will
                                       //  map onto the "surface" object
   
+  movie = new Movie(this, "transit.mov"); //create a new Movie object
+                                          //  loaded with your video
+  movie.loop();
+}
+
+//Necessary function for the Movie object to run
+void movieEvent(Movie m) {
+  m.read();
 }
 
 void draw(){
@@ -31,7 +42,13 @@ void draw(){
                                                                        //  coords into a color range
   float inverseMappedMouseY = map(mappedMouseY, 0, 255, 255, 0); //inverse the surface mouse
                                                                  //  mapped coords
-  texture.background(mappedMouseY, 0, inverseMappedMouseY); //create a colored background
+  
+  texture.tint(mappedMouseY, inverseMappedMouseY, 0);
+  texture.image(movie, 0, 0, texture.width, texture.height);
+  
+  texture.stroke(255);
+  texture.ellipse(surfaceMouse.x, surfaceMouse.y, 20,20);
+  
   texture.endDraw(); //end drawing onto the texture surface
   
   surface.render(texture); //now render the texture surface
