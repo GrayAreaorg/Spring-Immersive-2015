@@ -10,7 +10,7 @@ ClippingMask clip;
 boolean calibrate = true;
 
 int currShape = 0;
-int numShapes = 2;
+int numShapes = 3;
 
 void setup(){
   size(800,600,P3D);
