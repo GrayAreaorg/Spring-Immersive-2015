@@ -26,7 +26,7 @@ void setup(){
                                            //  Note, you need this to be P2D if
                                            //  you want to use video
   
-  movie = new Movie(this, "clip.mp4"); //create a new Movie object
+  movie = new Movie(this, "transit.mov"); //create a new Movie object
                                           //  loaded with your video
   movie.loop(); //for this demo, just loop the movie
   /*********************************************************/
